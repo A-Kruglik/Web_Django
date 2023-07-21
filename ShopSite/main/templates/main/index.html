@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+<h1>Страница главная</h1>
+<ul>
+    {% for p in posts %}
+    <li>
+        <h2>{{p.title}}</h2>
+        <p>{{p.content}}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
